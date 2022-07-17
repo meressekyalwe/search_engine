@@ -4,7 +4,6 @@
 #include "InvertedIndex.h"
 #include "SearchServer.h"
 #include <algorithm>
-#include "gtest/gtest.h"
 
 
 
