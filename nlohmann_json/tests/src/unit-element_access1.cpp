@@ -172,7 +172,7 @@ TEST_CASE("element access 1")
             {
                 SECTION("null")
                 {
-                    SECTION("standard tests")
+                    SECTION("standard test")
                     {
                         json j_nonarray(json::value_t::null);
                         const json j_nonarray_const(j_nonarray);

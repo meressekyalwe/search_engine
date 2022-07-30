@@ -81,7 +81,7 @@ static void PrintHelp() {
   Printf("\nTo run fuzzing pass 0 or more directories.\n");
   Printf("%s [-flag1=val1 [-flag2=val2 ...] ] [dir1 [dir2 ...] ]\n", Prog);
 
-  Printf("\nTo run individual tests without fuzzing pass 1 or more files:\n");
+  Printf("\nTo run individual test without fuzzing pass 1 or more files:\n");
   Printf("%s [-flag1=val1 [-flag2=val2 ...] ] file1 [file2 ...]\n", Prog);
 
   Printf("\nFlags: (strictly in form -flag=value)\n");

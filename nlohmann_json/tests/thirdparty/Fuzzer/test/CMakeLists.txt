@@ -1,4 +1,4 @@
-# Build all these tests with -O0, otherwise optimizations may merge some
+# Build all these test with -O0, otherwise optimizations may merge some
 # basic blocks and we'll fail to discover the targets.
 # We change the flags for every build type because we might be doing
 # a multi-configuration build (e.g. Xcode) where CMAKE_BUILD_TYPE doesn't
@@ -58,7 +58,7 @@ endfunction()
 set(TestBinaries)
 
 ###############################################################################
-# Basic tests
+# Basic test
 ###############################################################################
 
 set(Tests
@@ -128,7 +128,7 @@ endforeach()
 
 
 ###############################################################################
-# Unit tests
+# Unit test
 ###############################################################################
 
 add_executable(LLVMFuzzer-Unittest
@@ -163,7 +163,7 @@ set_target_properties(LLVMFuzzer-StandaloneInitializeTest
 )
 
 ###############################################################################
-# Additional tests
+# Additional test
 ###############################################################################
 
 include_directories(..)
@@ -195,9 +195,9 @@ set_target_properties(LLVMFuzzer-DSO2 PROPERTIES LIBRARY_OUTPUT_DIRECTORY
 set(TestBinaries ${TestBinaries} LLVMFuzzer-DSOTest)
 
 ###############################################################################
-# Configure lit to run the tests
+# Configure lit to run the test
 #
-# Note this is done after declaring all tests so we can inform lit if any tests
+# Note this is done after declaring all test so we can inform lit if any test
 # need to be disabled.
 ###############################################################################
 

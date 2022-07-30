@@ -28,7 +28,7 @@ SOFTWARE.
 */
 
 // XXX:
-// Only compile these tests if 'float' and 'double' are IEEE-754 single- and
+// Only compile these test if 'float' and 'double' are IEEE-754 single- and
 // double-precision numbers, resp.
 
 #include "doctest_compatibility.h"

@@ -89,7 +89,7 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
 endif()
 
 #############################################################################
-# add unit tests
+# add unit test
 #############################################################################
 
 if("${JSON_TestStandards}" STREQUAL "")
@@ -129,7 +129,7 @@ endforeach()
 # Test the generated build configs
 #############################################################################
 
-# these tests depend on the generated file nlohmann_jsonConfig.cmake
+# these test depend on the generated file nlohmann_jsonConfig.cmake
 if (JSON_Install)
     add_subdirectory(cmake_import)
     add_subdirectory(cmake_import_minver)

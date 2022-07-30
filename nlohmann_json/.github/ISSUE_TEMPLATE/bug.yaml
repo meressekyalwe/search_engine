@@ -90,4 +90,4 @@ body:
         Please check these additional steps:
       options:
         - label: The bug also occurs if the latest version from the [`develop`](https://github.com/nlohmann/json/tree/develop) branch is used.
-        - label: I can successfully [compile and run the unit tests](https://github.com/nlohmann/json#execute-unit-tests).
+        - label: I can successfully [compile and run the unit test](https://github.com/nlohmann/json#execute-unit-test).

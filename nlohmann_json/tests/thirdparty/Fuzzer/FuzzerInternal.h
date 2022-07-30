@@ -99,7 +99,7 @@ public:
   void SetMaxMutationLen(size_t MaxMutationLen);
   void RssLimitCallback();
 
-  // Public for tests.
+  // Public for test.
   void ResetCoverage();
 
   bool InFuzzingThread() const { return IsMyThread; }

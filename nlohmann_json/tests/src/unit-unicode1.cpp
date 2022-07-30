@@ -397,7 +397,7 @@ TEST_CASE("Markus Kuhn's UTF-8 decoder capability and stress test")
         {
             // All bytes of an incomplete sequence should be signalled as a single
             // malformed sequence, i.e., you should see only a single replacement
-            // character in each of the next 10 tests. (Characters as in section 2)
+            // character in each of the next 10 test. (Characters as in section 2)
 
             // 3.3.1  2-byte sequence with last byte missing (U+0000)
             roundtrip(false, "\xc0");

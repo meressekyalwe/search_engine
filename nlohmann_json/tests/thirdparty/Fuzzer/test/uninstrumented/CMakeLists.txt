@@ -1,4 +1,4 @@
-# These tests are not instrumented with coverage and don't
+# These test are not instrumented with coverage and don't
 # have coverage rt in the binary.
 
 set(CMAKE_CXX_FLAGS

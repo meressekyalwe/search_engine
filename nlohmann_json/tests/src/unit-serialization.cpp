@@ -135,7 +135,7 @@ TEST_CASE("serialization")
 
         SECTION("U+FFFD Substitution of Maximal Subparts")
         {
-            // Some tests (mostly) from
+            // Some test (mostly) from
             // https://www.unicode.org/versions/Unicode11.0.0/ch03.pdf
             // Section 3.9 -- U+FFFD Substitution of Maximal Subparts
 

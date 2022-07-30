@@ -285,7 +285,7 @@ inline void from_json(const json& j, for_3312& obj)
 }
 #endif
 
-TEST_CASE("regression tests 2")
+TEST_CASE("regression test 2")
 {
     SECTION("issue #1001 - Fix memory leak during parser callback")
     {

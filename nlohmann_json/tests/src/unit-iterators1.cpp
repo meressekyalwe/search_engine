@@ -226,7 +226,7 @@ TEST_CASE("iterators 1")
                 CHECK(*it == j_const);
             }
 
-            SECTION("additional tests")
+            SECTION("additional test")
             {
                 SECTION("!(begin != begin)")
                 {

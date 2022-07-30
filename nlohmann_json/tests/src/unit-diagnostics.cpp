@@ -107,7 +107,7 @@ TEST_CASE("Better diagnostics")
     }
 }
 
-TEST_CASE("Regression tests for extended diagnostics")
+TEST_CASE("Regression test for extended diagnostics")
 {
     SECTION("Regression test for https://github.com/nlohmann/json/pull/2562#pullrequestreview-574858448")
     {

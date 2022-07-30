@@ -1290,12 +1290,12 @@ TEST_CASE("JSON patch")
         }
     }
 
-    SECTION("Tests from github.com/json-patch/json-patch-tests")
+    SECTION("Tests from github.com/json-patch/json-patch-test")
     {
         for (const auto* filename :
                 {
-                    TEST_DATA_DIRECTORY "/json-patch-tests/spec_tests.json",
-                    TEST_DATA_DIRECTORY "/json-patch-tests/tests.json"
+                    TEST_DATA_DIRECTORY "/json-patch-test/spec_tests.json",
+                    TEST_DATA_DIRECTORY "/json-patch-test/test.json"
                 })
         {
             CAPTURE(filename)
@@ -1306,7 +1306,7 @@ TEST_CASE("JSON patch")
             {
                 INFO_WITH_TEMP(test.value("comment", ""));
 
-                // skip tests marked as disabled
+                // skip test marked as disabled
                 if (test.value("disabled", false))
                 {
                     continue;

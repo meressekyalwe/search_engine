@@ -44,7 +44,7 @@ endforeach()
 
 #############################################################################
 # json_test_set_test_options(
-#     all|<tests>
+#     all|<test>
 #     [CXX_STANDARDS all|<args>...]
 #     [COMPILE_DEFINITIONS <args>...]
 #     [COMPILE_FEATURES <args>...]
@@ -53,7 +53,7 @@ endforeach()
 #     [LINK_OPTIONS <args>...])
 #
 # Supply test- and standard-specific build settings.
-# Specify multiple tests using a list e.g., "test-foo;test-bar".
+# Specify multiple test using a list e.g., "test-foo;test-bar".
 #
 # Must be called BEFORE the test is created.
 #############################################################################

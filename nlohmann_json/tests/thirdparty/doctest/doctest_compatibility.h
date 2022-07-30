@@ -26,7 +26,7 @@
 #define CHECK_THROWS_WITH_STD_STR(expr, str)                                   \
     CHECK_THROWS_WITH_STD_STR_IMPL(expr, str, DOCTEST_ANONYMOUS(DOCTEST_STD_STRING_))
 
-// included here because for some tests in the json repository private is defined as
+// included here because for some test in the json repository private is defined as
 // public and if no STL header is included before that then in the json include when STL
 // stuff is included the MSVC STL complains (errors) that C++ keywords are being redefined
 #include <iosfwd>

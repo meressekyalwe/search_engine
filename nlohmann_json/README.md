@@ -1167,7 +1167,7 @@ The package configuration file, `nlohmann_jsonConfig.cmake`, can be used either 
 To embed the library directly into an existing CMake project, place the entire source tree in a subdirectory and call `add_subdirectory()` in your `CMakeLists.txt` file:
 
 ```cmake
-# Typically you don't care so much for a third party library's tests to be
+# Typically you don't care so much for a third party library's test to be
 # run from your own project's code.
 set(JSON_BuildTests OFF CACHE INTERNAL "")
 

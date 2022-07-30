@@ -97,7 +97,7 @@ struct contact_book
 // to_json methods
 namespace udt
 {
-// templates because of the custom_json tests (see below)
+// templates because of the custom_json test (see below)
 template <typename BasicJsonType>
 static void to_json(BasicJsonType& j, age a)
 {

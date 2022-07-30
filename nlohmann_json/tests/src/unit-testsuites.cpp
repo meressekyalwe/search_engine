@@ -35,7 +35,7 @@ using nlohmann::json;
 #include <fstream>
 #include <test_data.hpp>
 
-TEST_CASE("compliance tests from json.org")
+TEST_CASE("compliance test from json.org")
 {
     // test cases are from https://json.org/JSON_checker/
 
@@ -87,7 +87,7 @@ TEST_CASE("compliance tests from json.org")
 
     SECTION("no failures with trailing literals (relaxed)")
     {
-        // these tests fail above, because the parser does not end on EOF;
+        // these test fail above, because the parser does not end on EOF;
         // they succeed when the operator>> is used, because it does not
         // have this constraint
         for (const auto* filename :
@@ -121,7 +121,7 @@ TEST_CASE("compliance tests from json.org")
     }
 }
 
-TEST_CASE("compliance tests from nativejson-benchmark")
+TEST_CASE("compliance test from nativejson-benchmark")
 {
     // test cases from https://github.com/miloyip/nativejson-benchmark/blob/master/src/main.cpp
 
@@ -815,7 +815,7 @@ TEST_CASE("nst's JSONTestSuite")
 
         SECTION("n -> y (relaxed)")
         {
-            // these tests fail above, because the parser does not end on EOF;
+            // these test fail above, because the parser does not end on EOF;
             // they succeed when the operator>> is used, because it does not
             // have this constraint
             for (const auto* filename :

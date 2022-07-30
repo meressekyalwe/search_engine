@@ -127,7 +127,7 @@ struct nocopy // NOLINT(cppcoreguidelines-special-member-functions,hicpp-special
 };
 } // namespace
 
-TEST_CASE("regression tests 1")
+TEST_CASE("regression test 1")
 {
     SECTION("issue #60 - Double quotation mark is not parsed correctly")
     {
@@ -272,7 +272,7 @@ TEST_CASE("regression tests 1")
         j["int_1"] = 1;
         CHECK(j["int_1"] == 1);
 
-        // tests for correct handling of non-standard integers that overflow the type selected by the user
+        // test for correct handling of non-standard integers that overflow the type selected by the user
 
         // unsigned integer object creation - expected to wrap and still be stored as an integer
         j = 4294967296U; // 2^32
@@ -1501,7 +1501,7 @@ TEST_CASE("regression tests 1")
 }
 
 #if !defined(JSON_NOEXCEPTION)
-TEST_CASE("regression tests, exceptions dependent")
+TEST_CASE("regression test, exceptions dependent")
 {
     SECTION("issue #1340 - eof not set on exhausted input stream")
     {
