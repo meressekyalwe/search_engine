@@ -17,9 +17,9 @@ struct RelativeIndex
         return (doc_id == other.doc_id && rank == other.rank);
     }
 
-    bool operator > (const RelativeIndex& other) const // operateur pour ranger par ordre de rank // для сравнения RelativeIndex rank
+    bool operator < (const RelativeIndex& other) const // operateur pour ranger par ordre de rank // для сравнения RelativeIndex rank
     {
-        return (rank > other.rank);
+        return (rank < other.rank);
     }
 };
 

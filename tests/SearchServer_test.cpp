@@ -21,7 +21,7 @@ TEST(TestCaseSearchServer, TestSimple) {
                 {1, 0.3}
                 },
                 {
-                {}
+
                 }
     };
     InvertedIndex idx;
@@ -60,9 +60,9 @@ TEST(TestCaseSearchServer, TestTop5) {
             {
                 {7, 1},
                 {14, 1},
-                {0, 0.4},
-                {1, 0.4},
-                {2, 0.4}
+                {0, 0.667},
+                {1, 0.667},
+                {2, 0.667}
             }
     };
     InvertedIndex idx;

@@ -19,7 +19,7 @@ int main()
 
     invertedIndex.UpdateDocumentBase(docs);
 
-    SearchServer searchServer{invertedIndex};
+    SearchServer searchServer(invertedIndex);
 
     auto results = searchServer.search(requests);
 

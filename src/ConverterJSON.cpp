@@ -8,7 +8,7 @@
 
 std::vector<std::string> ConverterJSON::GetTextDocuments()
 {
-    std::ifstream ifstr("../JsonFiles/config.json");
+    std::ifstream ifstr("../../JsonFiles/config.json");
     nlohmann::json json;
     ifstr >> json;
     std::string str;
@@ -40,7 +40,7 @@ std::vector<std::string> ConverterJSON::GetTextDocuments()
 
 int ConverterJSON::GetResponsesLimit()
 {
-    std::ifstream ifstr("../JsonFiles/config.json");
+    std::ifstream ifstr("../../JsonFiles/config.json");
     nlohmann::json config;
     ifstr >> config;
 
@@ -50,7 +50,7 @@ int ConverterJSON::GetResponsesLimit()
 std::vector<std::string> ConverterJSON::GetRequests()
 {
     std::vector<std::string> requests;
-    std::ifstream ifstr("../JsonFiles/requests.json");
+    std::ifstream ifstr("../../JsonFiles/requests.json");
     nlohmann::json json;
     ifstr >> json;
 
@@ -69,7 +69,7 @@ void ConverterJSON::putAnswers(std::vector<std::vector<std::pair<int, float>>> a
 {
     auto requests = GetRequests();
     nlohmann::json json;
-    std::ofstream ofstr("../JsonFiles/answers.json");
+    std::ofstream ofstr("../../JsonFiles/answers.json");
 
     for (size_t i = 0; i < answers.size(); i++)
     {

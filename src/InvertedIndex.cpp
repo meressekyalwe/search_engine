@@ -40,7 +40,7 @@ void InvertedIndex::UpdateDocumentBase(const std::vector<std::string>& input_doc
 
                     while(nPos != std::string::npos)
                     {
-                        if (request[nPos + subs.length()] >= 32 || request[nPos + subs.length()] <= 64) // 32 это пробель !!!
+                        if ((request[nPos -1] == (char)32 || nPos == 0) && (request[nPos + subs.length()] == (char)32 || nPos + subs.length() == request.length()))
                         {
                             count += 1;
                         }
@@ -70,6 +70,13 @@ void InvertedIndex::UpdateDocumentBase(const std::vector<std::string>& input_doc
 
 std::vector<Entry> InvertedIndex::GetWordCount(const std::string &word)
 {
-    return freq_dictionary[word];
+    std::map<std::string, std::vector<Entry>>::iterator it = freq_dictionary.find(word);
+
+    if (it != freq_dictionary.end())
+    {
+        return freq_dictionary[word];
+    }
+
+    return{};
 }
 

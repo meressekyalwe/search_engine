@@ -6,6 +6,8 @@
 #include <algorithm>
 #include "SearchServer.h"
 #include "ConverterJSON.h"
+#include <cmath>
+#include <iomanip>
 
 
 std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<std::string> &queries_input)
@@ -44,30 +46,53 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
 
             if (!entries.empty())
             {
-                size_t rabs = 0;
-
                 for (auto entry : entries)
                 {
-                    rabs += entry.count;
-                    map[entry.doc_id] = rabs;
+                    std::map<size_t, size_t>::iterator it = map.find(entry.doc_id);
+
+                    if (it != map.end())
+                    {
+                        map[entry.doc_id] += entry.count;
+                    }
+                    else
+                    {
+                        map[entry.doc_id] = entry.count;
+                    }
                 }
             }
         }
 
         for (auto it = map.begin(); it != map.end(); it++)
         {
-            float rank = 0.f;
-
             auto iterator = std::max_element(map.begin(),map.end(),[] (const std::pair<char,int>& a, const std::pair<char,int>& b)->bool{ return a.second < b.second; });
 
             size_t rabsMax = iterator->second;
 
-            rank = (float)it->second / (float)rabsMax;
+            float f = (float)it->second / (float)rabsMax;
+
+            std::stringstream stream;
+
+            stream << std::fixed << std::setprecision(3) << f;
+
+            std::string s = stream.str();
+
+            float rank = std::stof(s);
 
             Index.push_back({it->first, rank});
         }
 
-        sort(Index.begin(), Index.end(), std::greater<RelativeIndex>()); // сравнения rank The std::greater is a functional object which is used for performing comparisons.
+        for (size_t i = 0; i < Index.size(); i++) // sort in descending order rank
+        {
+            for (size_t j = 0; j < Index.size() - 1; j++)
+            {
+                if (Index[j] < Index[j + 1])
+                {
+                    RelativeIndex temp = Index[j];
+                    Index[j] = Index[j + 1];
+                    Index[j + 1] = temp;
+                }
+            }
+        }
 
         if (Index.size() > responseLimit)
         {

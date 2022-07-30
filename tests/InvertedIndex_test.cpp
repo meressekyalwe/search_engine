@@ -43,13 +43,16 @@ TEST(TestCaseInvertedIndex, TestBasic2) {
             "milk milk milk milk milk water water water water water",
             "Americano Cappuccino"
     };
-    const vector<string> requests = {"milk", "water", "cappuchino"};
+    const vector<string> requests = {"milk", "water", "Cappuccino"};
     const vector<vector<Entry>> expected = {
             {
+
                 {0, 4}, {1, 1}, {2, 5}
-                }, {
-                {0, 2}, {1, 2}, {2, 5}
-                }, {
+            },
+            {
+                {0, 3}, {1, 2}, {2, 5}
+            },
+            {
                 {3, 1}
             }
     };
@@ -63,8 +66,8 @@ TEST(TestCaseInvertedIndex, TestInvertedIndexMissingWord) {
     const vector<string> requests = {"m", "statement"};
     const vector<vector<Entry>> expected = {
             {
-                {}
-                }, {
+                //{}
+            }, {
                 {1, 1}
             }
     };
