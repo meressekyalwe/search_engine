@@ -1,0 +1,54 @@
+{
+      "answers": {
+            "request1": {
+                  "result": false
+            },
+            "request2": {
+                  "relevance": [
+                        {
+                              "doc_id": 1,
+                              "rank": null
+                        }
+                  ],
+                  "result": true
+            },
+            "request3": {
+                  "relevance": [
+                        {
+                              "doc_id": 2,
+                              "rank": null
+                        },
+                        {
+                              "doc_id": 3,
+                              "rank": null
+                        }
+                  ],
+                  "result": true
+            },
+            "request4": {
+                  "result": false
+            },
+            "request5": {
+                  "relevance": [
+                        {
+                              "doc_id": 1,
+                              "rank": null
+                        },
+                        {
+                              "doc_id": 3,
+                              "rank": null
+                        }
+                  ],
+                  "result": true
+            },
+            "request6": {
+                  "relevance": [
+                        {
+                              "doc_id": 5,
+                              "rank": null
+                        }
+                  ],
+                  "result": true
+            }
+      }
+}
