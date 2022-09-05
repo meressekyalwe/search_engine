@@ -18,47 +18,45 @@ void InvertedIndex::UpdateDocumentBase(const std::vector<std::string>& input_doc
     for (size_t doc_id = 0; doc_id < docs.size(); doc_id++)
     {
         threads.emplace_back([doc_id, this]()
+        {
+            std::string request = docs[doc_id];
+
+            std::istringstream ss(request);
+
+            std::string word;
+
+            std::vector<std::string> words;
+
+            std::set<std::string> unique_words;
+
+            while (ss >> word)
             {
-                std::string request = docs[doc_id];
-
-                std::istringstream ss(request);
-
-                std::string word;
-
-                std::vector<std::string> words;
-
-                std::set<std::string> unique_words;
-
-                while (ss >> word)
+                if (!word.empty())
                 {
                     words.push_back(word);
 
                     unique_words.emplace(word);
                 }
+            }
 
-                for (auto subs : unique_words)
+            for (const auto& subs : unique_words)
+            {
+                size_t count = 0;
+
+                for (size_t j = 0; j < words.size(); j++)
                 {
-                    if (!subs.empty())
-                    {
-                        size_t count = 0;
-
-                        for (size_t j = 0; j < words.size(); j++)
-                        {
-                            if (words[j] == subs) count += 1;
-                        }
-
-                        Entry entry({ doc_id, count });
-
-                        freq_dictionary[subs].push_back(entry); 
-                    }
+                    if (words[j] == subs) count += 1;
                 }
-            });
+
+                freq_dictionary[subs].emplace_back(Entry{doc_id, count});
+            }
+        });
     }
 
     std::for_each(threads.begin(), threads.end(), [](std::thread& t)
-        {
-            t.join();
-        });
+    {
+        t.join();
+    });
 
     for (auto& i : freq_dictionary)
     {
