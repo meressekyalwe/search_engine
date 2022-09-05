@@ -7,7 +7,7 @@
                   "relevance": [
                         {
                               "doc_id": 1,
-                              "rank": null
+                              "rank": 1.0
                         }
                   ],
                   "result": true
@@ -16,11 +16,11 @@
                   "relevance": [
                         {
                               "doc_id": 2,
-                              "rank": null
+                              "rank": 1.0
                         },
                         {
                               "doc_id": 3,
-                              "rank": null
+                              "rank": 1.0
                         }
                   ],
                   "result": true
@@ -32,11 +32,11 @@
                   "relevance": [
                         {
                               "doc_id": 1,
-                              "rank": null
+                              "rank": 1.0
                         },
                         {
                               "doc_id": 3,
-                              "rank": null
+                              "rank": 0.25
                         }
                   ],
                   "result": true
@@ -45,7 +45,7 @@
                   "relevance": [
                         {
                               "doc_id": 5,
-                              "rank": null
+                              "rank": 1.0
                         }
                   ],
                   "result": true

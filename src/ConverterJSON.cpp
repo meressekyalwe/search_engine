@@ -8,7 +8,7 @@
 
 std::vector<std::string> ConverterJSON::GetTextDocuments()
 {
-    std::ifstream ifstr("C:\\Users\\Meresse\\Downloads\\search_engine-master\\search_engine-master\\JsonFiles\\config.json");
+    std::ifstream ifstr("../../JsonFiles/config.json");
 
     if (ifstr.is_open())
     {
@@ -76,7 +76,7 @@ std::vector<std::string> ConverterJSON::GetTextDocuments()
 
 int ConverterJSON::GetResponsesLimit()
 {
-    std::ifstream ifstr("C:\\Users\\Meresse\\Downloads\\search_engine-master\\search_engine-master\\JsonFiles\\config.json");
+    std::ifstream ifstr("../../JsonFiles/config.json");
 
     if (ifstr.is_open())
     {
@@ -89,7 +89,7 @@ int ConverterJSON::GetResponsesLimit()
 
 std::vector<std::string> ConverterJSON::GetRequests()
 {
-    std::ifstream ifstr("C:\\Users\\Meresse\\Downloads\\search_engine-master\\search_engine-master\\JsonFiles\\requests.json");
+    std::ifstream ifstr("../../JsonFiles/requests.json");
 
     if (ifstr.is_open())
     {
@@ -116,7 +116,7 @@ std::vector<std::string> ConverterJSON::GetRequests()
 
 void ConverterJSON::putAnswers(std::vector<std::vector<std::pair<int, float>>> answers)
 {
-    std::ofstream ofstr("C:\\Users\\Meresse\\Downloads\\search_engine-master\\search_engine-master\\JsonFiles\\answers.json");
+    std::ofstream ofstr("../../JsonFiles/answers.json");
 
     if (ofstr.is_open())
     {

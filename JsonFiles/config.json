@@ -5,11 +5,11 @@
     "version": "0.1"
   },
   "files": [
-    "C:\\Users\\Meresse\\Downloads\\search_engine-master\\search_engine-master\\resources\\file001.txt",
-    "C:\\Users\\Meresse\\Downloads\\search_engine-master\\search_engine-master\\resources\\file002.txt",
-    "C:\\Users\\Meresse\\Downloads\\search_engine-master\\search_engine-master\\resources\\file003.txt",
-    "C:\\Users\\Meresse\\Downloads\\search_engine-master\\search_engine-master\\resources\\file004.txt",
-    "C:\\Users\\Meresse\\Downloads\\search_engine-master\\search_engine-master\\resources\\file005.txt",
-    "C:\\Users\\Meresse\\Downloads\\search_engine-master\\search_engine-master\\resources\\file006.txt"
+    "../../resources/file001.txt",
+    "../../resources/file002.txt",
+    "../../resources/file003.txt",
+    "../../resources/file004.txt",
+    "../../resources/file005.txt",
+    "../../resources/file006.txt"
   ]
 }
